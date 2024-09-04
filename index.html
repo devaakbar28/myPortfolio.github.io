@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="author" content="Deva Akbar Maulana">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- My CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- My Script -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+    ></script>
+    <script defer src="script.js"></script>
+    <title>MyPortfolio | Deva Akbar</title>
+  </head>
+  <body>
+    <main>
+      <aside>
+        <ul class="links">
+          <li onclick="Navigate(0)" class="activeLinks">
+            <i class="fa-solid fa-house"></i>
+            <p>Beranda</p>
+          </li>
+          <li onclick="Navigate(1)">
+            <i class="fa-solid fa-user"></i>
+            <p>Tentang</p>
+          </li>
+          <li onclick="Navigate(2)">
+            <i class="fa-solid fa-list"></i>
+            <p>Pengalaman</p>
+          </li>
+          <li onclick="Navigate(3)">
+            <i class="fa-solid fa-images"></i>
+            <p>Galeri</p>
+          </li>
+          <li onclick="Navigate(4)">
+            <i class="fa-solid fa-comments"></i>
+            <p>Kontak</p>
+          </li>
+        </ul>
+      </aside>
+
+      <div class="swiper mySwiper">
+        <div class="slideContainer swiper-wrapper">
+          <div class="swiper-slide home-slide">
+            <div class="homeContent">
+              <h2>Hai, Saya <span>Deva Akbar Maulana</span></h2>
+              <p>
+                Perkenalkan, nama saya Deva Akbar Maulana, saya lulusan tahun 2020 dari SMK Mitra Industri MM2100, dari Jurusan Teknik Elektronika Industri.
+              </p>
+              <!-- <div class="buttonGroup">
+                <button>Hire Me</button>
+                <button>Contact Me</button>
+              </div> -->
+            </div>
+            <div class="sideImg">
+              <div class="top-right-corner">
+                <hr class="hr1" />
+                <hr class="hr2" />
+              </div>
+              <img src="img/3.jpg" alt=""/>
+              <div class="bottom-left-corner">
+                <hr class="hr1" />
+                <hr class="hr2" />
+              </div>
+            </div>
+            <p class="slide-help">
+              Scroll for the Next Slide
+              <i class="fa-solid fa-chevron-right fa-shake"></i>
+            </p>
+          </div>
+          <div class="swiper-slide">
+            <div class="about-us">
+              <h1>Tentang Saya</h1>
+              <p>
+                Saya lulusan tahun 2020 dari SMK Mitra Industri MM2100 jurusan Teknik Elektronika Industri. Selama bersekolah, saya mengikuti organisasi selama 3 tahun, yaitu <span>OSIS dan Duta Lingkungan.</span> Saya memiliki ketertarikan di dunia IT, dan saya telah belajar bahasa pemrograman dari tahun 2021. Saya memiliki pengalaman bekerja selama 2 tahun sebagai <span>Operator Produksi Painting section Loading</span> dan 3 bulan sebagai <span>Maintenance.</span> Terbiasa bekerja dalam tim dengan komunikasi yang baik. Pribadi yang jujur, teliti, dan bertanggung jawab atas apa yang telah dimulai.
+              </p>
+              <div class="about-me-division">
+                <div class="about-me-table">
+                  <li>Bekasi, 28 April 2002</li>
+                  <li>22 Tahun</li>
+                  <li>Tinggi Badan : 167 cm</li>
+                  <li>Berat Badan : 47 kg</li>
+                  <li>Teknik Elektronika Industri</li>
+                  <li>Lulusan 2020</li>
+                  <li>Operator Produksi Painting section Loading</li>
+                  <li><span>Maintenance</span></li>
+                  <!-- <div class="buttonGroup">
+                    <button>Hire Me</button>
+                    <button>Contact Me</button>
+                  </div> -->
+                </div>
+
+                <div class="skill-bar">
+                  <li>
+                    <p>HTML & CSS</p>
+                    <div class="bar">
+                      <div class="active-bar" style="width: 80%">
+                        <div class="skill"><p>80%</p></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <p>Javascript & PHP</p>
+                    <div class="bar">
+                      <div class="active-bar" style="width: 70%">
+                        <div class="skill"><p>70%</p></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <p>Microsoft Office</p>
+                    <div class="bar">
+                      <div class="active-bar" style="width: 85%">
+                        <div class="skill"><p>85%</p></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <p>Aplikasi Elektronika dan PLC</p>
+                    <div class="bar">
+                      <div class="active-bar" style="width: 70%">
+                        <div class="skill"><p>70%</p></div>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- <li>
+                    <p>Pyton</p>
+                    <div class="bar">
+                      <div class="active-bar" style="width: 60%"></div>
+                    </div>
+                  </li> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide services">
+            <h1 class="heading">Pengalaman Kerja</h1>
+            <div class="service1">
+              <div class="service-icon">
+                <h3>PT Maruhachi Indonesia</h3>
+                <h4>Operator Produksi Painting section Loading : 2 Tahun</h4>
+                <p>
+                  <ul>
+                    <li>Mengatur/ menyiapkan/ mengecek part yang akan naik loading.</li>
+                    <li>Menyiapkan second hanger yang akan dinaikan.</li>
+                    <li>Memasang part ke second hanger.</li>
+                    <li>Meletakan/ membuka part ke conveyor untuk dipasang ke second hanger.</li>
+                    <li>Memasang/ memasukan second hanger ke main hanger.</li>
+                    <li>Mengetahui/ menghitung after before part yang sudah dipainting.</li>
+                    <li>Mengetahui/ menghitung part sesuai warna dan dimasukan ke stok harian.</li>
+                    <li>Mengatur schedule loading yang akan dinaikan lebih dulu sesuai schedule part minus.</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+
+            <div class="service2">
+              <div class="service-icon">
+                <h3>PT Sentralindo Teguh Gemilang</h3>
+                <h4>Maintenance (Mesin Corrugator) : 3 Bulan</h4>
+                <p>
+                  <ul>
+                    <li>Melakukan daily check, atau tindakan preventif.</li>
+                    <li>Mengerti panel instalasi 3 phasa, dan PLC.</li>
+                    <li>Melakukan perbaikan Mekanikal dan Elektrikal.</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+
+            <!-- <div class="service">
+              <div class="service-icon">
+                <h2>SEO</h2>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Fugiat
+                </p>
+              </div>
+            </div> -->
+
+            <!-- <div class="service">
+              <div class="service-icon">
+                <h2>Graphic Designer</h2>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Fugiat e
+                </p>
+              </div>
+            </div> -->
+
+            <!-- <div class="service">
+              <div class="service-icon">
+                <h2>Software Developer</h2>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Fugiat e
+                </p>
+              </div>
+            </div> -->
+
+            <!-- <div class="service">
+              <div class="service-icon">
+                <h2>Database Admin</h2>
+                <p>Letrterretrettre</p>
+              </div>
+            </div> -->
+          </div>
+          <div class="swiper-slide gallery">
+            <h1>Galeri Saya</h1>
+            <div class="project"><img src="img/4.jpg" alt="" /></div>
+            <div class="project"><img src="img/5.jpg" alt="" /></div>
+            <div class="project"><img src="img/6.jpg " alt="" /></div>
+            <div class="project"><img src="img/7.jpg" alt="" /></div>
+            <div class="project"><img src="img/8.jpg" alt="" /></div>
+            <div class="project"><img src="img/9.jpg" alt="" /></div>
+          </div>
+
+          <div class="swiper-slide contactMe">
+            <h1>Contact Me</h1>
+            <div class="contactInfo">
+                <i class="fa-solid fa-phone"></i>
+                <h3>Nomor Hp / Whatsapp</h3>
+                <p><a href="https://wa.me/6281290439011" target="_blank">081290439011</a></p>
+            </div>
+        
+            <div class="contactInfo">
+                <i class="fa-solid fa-envelope"></i>
+                <h3>Email</h3>
+                <p><a href="mailto:devaakbarm28@gmail.com" target="_blank">devaakbarm28@gmail.com</a></p>
+            </div>
+        
+            <div class="contactInfo">
+                <i class="fa-solid fa-globe"></i>
+                <h3>Website</h3>
+                <p><a href="https://github.com/devaakbar28" target="_blank">GitHub</a></p>
+            </div>
+        
+            <form action="send_email.php" method="post">
+                <h2>
+                    <p>Kirim Pesan</p>
+                    <div class="socialLinks">
+                        <a href="https://wa.me/6281290439011" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/devaakbar.m/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="mailto:devaakbarm28@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+                    </div>
+                </h2>
+                <input type="text" id="name" name="name" placeholder="Nama" required />
+                <input type="email" id="email" name="email" placeholder="Email" required />
+                <textarea id="message" name="message" rows="10" placeholder="Type your message here..." required></textarea>
+                <button type="submit" class="primary">Send</button>
+            </form>
+            <footer>
+                <p>&copy; 2024 Deva Akbar Maulana</p>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

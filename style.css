@@ -1,0 +1,860 @@
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+/**
+   * For IE 6/7 only
+   * Include this rule to trigger hasLayout and contain floats.
+   */
+.cf {
+  zoom: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  background-color: rgb(118, 118, 118);
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+main {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+aside {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-size: 1.2rem;
+  font-family: "Moderustic", sans-serif;
+  background-color: #212529;
+  backdrop-filter: blur(20px);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+aside li {
+  list-style-type: none;
+  display: flex;
+  padding: 20px;
+  gap: 10px;
+  color: white;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+
+  transition-duration: 0.2s;
+}
+
+aside li:hover {
+  color: #80ed99;
+}
+
+aside li::after {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  height: 2px;
+  background: linear-gradient(to left, transparent, #ffffff24, transparent);
+  content: "";
+  bottom: 0px;
+}
+
+aside li i {
+  font-size: 1.3rem;
+}
+
+/* .activeLinks {
+  color: #80ed99;
+} */
+
+.mySwiper {
+  flex: 1;
+  height: 100%;
+}
+
+.home-slide {
+  color: white;
+  display: flex;
+  background-color: #343a40;
+}
+
+.homeContent {
+  margin: auto 0px;
+  flex: 1;
+  height: auto;
+  padding: 20px;
+  user-select: none;
+  text-align: center;
+}
+
+.homeContent h2 {
+  font-family: "Edu VIC WA NT Beginner", sans-serif;
+}
+
+.homeContent h2 span {
+  color: #85f69f;
+}
+
+.homeContent p {
+  font-size: 1.2rem;
+}
+
+.sideImg {
+  width: 30%;
+  margin: auto 10px;
+  margin-right: 200px;
+  position: relative;
+}
+
+.sideImg img {
+  width: 120%;
+  border-radius: 10px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.sideImg .top-right-corner,
+.bottom-left-corner {
+  position: absolute;
+}
+
+.bottom-left-corner {
+  left: -50px;
+  bottom: -35px;
+  rotate: -90deg;
+}
+
+.top-right-corner {
+  right: -130px;
+  top: -40px;
+  rotate: 90deg;
+}
+
+.hr1 {
+  width: 150px;
+  height: 10px;
+  border: none;
+  background: #80ed99;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.hr2 {
+  width: 10px;
+  height: 120px;
+  border-bottom-left-radius: 3px;
+  background: #80ed99;
+  border: none;
+  border-bottom-right-radius: 3px;
+}
+
+.homeContent h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.homeContent h2 {
+  font-size: 2.3rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.homeContent h1 .stylized-name {
+  font-weight: 700;
+  color: #80ed99;
+}
+
+.proffesions {
+  color: #85f69f;
+}
+
+.homeContent .heroline {
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding-right: 50px;
+}
+
+.buttonGroup {
+  display: flex;
+  padding: 10px 0px;
+  margin-top: 10px;
+}
+
+.buttonGroup button,
+.primary {
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 5px;
+  cursor: pointer;
+  background-color: #1d8637;
+  color: white;
+  border-radius: 5px;
+}
+
+.slide-help {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+  z-index: 100;
+  left: 0%;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+}
+
+.mySwiper {
+  width: 80vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #343a40;
+}
+
+.swiper-slide {
+  width: 100%;
+  background-color: rgba(52, 58, 64, 0.9);
+  height: 100%;
+  /* overflow: hidden; */
+}
+
+.about-us {
+  width: 100%;
+  height: 100%;
+  padding: 100px;
+  color: white;
+  overflow: hidden;
+}
+
+.about-us h1 {
+  font-family: "Edu VIC WA NT Beginner", sans-serif;
+  color: #80ed99;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.about-us p {
+  text-align: justify;
+  font-size: 1.1rem;
+}
+
+.about-us p span {
+  color: #80ed99;
+}
+
+.heading {
+  padding: 20px 10px;
+  font-size: 2.5rem;
+  color: #80ed99;
+}
+
+/* .about-us h3 {
+  padding: 10px;
+} */
+
+/* .about-me-details {
+  padding: 20px;
+  font-weight: 300;
+} */
+
+.about-me-division {
+  display: flex;
+  margin-top: 30px;
+}
+
+.about-me-table {
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(2, 65%);
+  /* margin-right: 40px; */
+}
+
+.about-me-table li {
+  margin-top: 20px;
+  font-size: 1rem;
+  margin-left: -10px;
+  padding: 10px;
+  position: relative;
+  text-align: left;
+}
+
+.about-me-table li::after {
+  position: absolute;
+  width: 60%;
+  left: 0px;
+  top: 50px;
+  height: 1px;
+  background: linear-gradient(to left, transparent, #ffffff77, transparent);
+  content: "";
+  bottom: 0px;
+}
+
+/* .about-me-table span {
+    color: #80ed99;
+    font-weight: bold;
+    margin-right: 5px;
+} */
+
+.about-me-table .buttonGroup {
+  grid-column: 1 / span 2;
+  justify-content: center;
+  padding: 50px;
+  flex: 1;
+}
+
+.skill-bar {
+  width: calc(40% - 20px);
+  margin-top: -5px;
+  margin-left: 100px;
+}
+
+.skill-bar li {
+  width: 100%;
+  padding: 10px;
+}
+
+.skill-bar p {
+  color: #80ed99;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.skill-bar .bar {
+  width: 100%;
+  height: 15px;
+  background-color: #272c30;
+  border-radius: 20px;
+  position: relative;
+}
+
+.active-bar {
+  background-color: #80ed99;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.active-bar .skill {
+  font-weight: normal;
+  font-size: 1rem;
+  right: -50px;
+  top: -16px;
+  position: absolute;
+}
+
+.active-bar:hover {
+  color: white;
+}
+
+.services {
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(2, calc(50% - 10px));
+  grid-template-rows: 100px calc(50% - 50px) calc(50% - 50px);
+  padding: 100px;
+  box-sizing: border-box;
+}
+
+.services .heading {
+  grid-column: 1 / span 2;
+  font-family: "Edu VIC WA NT Beginner", sans-serif;
+  color: #80ed99;
+  font-size: 2.2rem;
+}
+
+.services .service1 {
+  display: flex;
+  text-align: left;
+  justify-content: left;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 20px;
+  backdrop-filter: blur(10px);
+  flex-direction: column;
+  transition-duration: 0.3s;
+  background-image: url(img/2.png);
+  background-size: contain;
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  height: 470px;
+}
+
+.services .service1 .service-icon {
+  padding: 0px 0px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.service1 h3 {
+  margin-top: 65px;
+  color: rgb(2, 117, 216, 0.7);
+  text-align: center;
+}
+
+.service1 h4 {
+  text-align: center;
+}
+
+.service1 ul {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.service1 ul li {
+  font-size: 0.9rem;
+}
+
+.service1:hover {
+  background-color: #61f7847a;
+  color: white;
+}
+
+.service1:hover h3 {
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: rgb(2, 117, 216, 0.7);
+}
+
+.service1:hover h4 {
+  color: rgb(2, 117, 216, 0.7);
+  font-weight: 800;
+}
+
+.service1:hover ul li {
+  color: black;
+  font-weight: 700;
+}
+
+.services .service2 {
+  display: flex;
+  text-align: left;
+  justify-content: left;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 20px;
+  backdrop-filter: blur(10px);
+  flex-direction: column;
+  transition-duration: 0.3s;
+  background-image: url(img/3.png);
+  background-size: contain;
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  height: 470px;
+}
+
+.services .service2 .service-icon {
+  padding: 0px 0px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.service2 h3 {
+  margin-top: 65px;
+  color: rgba(203, 52, 52, 0.7);
+  text-align: center;
+}
+
+.service2 h4 {
+  text-align: center;
+}
+
+.service2 ul {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.service2 ul li {
+  font-size: 1rem;
+}
+
+.service2:hover h3 {
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: rgba(203, 52, 52, 0.7);
+}
+
+.service2:hover {
+  background-color: #61f7847a;
+  color: white;
+}
+
+.service2:hover h4 {
+  color: rgba(203, 52, 52, 0.7);
+  font-weight: 800;
+}
+
+.service2:hover ul li {
+  color: black;
+  font-weight: 700;
+}
+
+/* .services .service i {
+  font-size: 3rem;
+  color: #80ed99;
+} */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  padding: 20px;
+  grid-template-rows: 100px calc(50% - 50px) calc(50% - 50px);
+}
+
+.gallery h1,
+.gallery h2 {
+  grid-column: 1 / span 3;
+}
+
+.gallery h1 {
+  font-family: "Edu VIC WA NT Beginner", sans-serif;
+  color: #80ed99;
+  font-size: 2.2rem;
+  font-weight: 600;
+  padding: 30px 20px;
+}
+
+.gallery .project {
+  margin: 25px 20px;
+  margin-top: 0px;
+  background: #212529;
+  padding: 5px;
+  border-radius: 20px;
+  border: 2px solid white;
+  overflow: hidden;
+}
+
+.gallery .project img {
+  width: 100%;
+  /* height: auto; */
+  border-radius: 10px;
+  background-size: cover;
+  border: none;
+  margin-top: -50px;
+}
+
+/* .contactInfo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -120px;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.contactInfo i {
+  font-size: 2.1rem;
+  color: #80ed99;
+  margin: 10px auto;
+}
+
+.contactInfo h3 {
+  color: #80ed99;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.contactMe {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 80px calc(25% - 20px) calc(25% - 20px) calc(25% - 20px) calc(
+      25% - 20px
+    );
+  position: relative;
+  padding: 50px;
+}
+
+.contactMe h1 {
+  grid-column: 1 / span 3;
+  padding: 30px;
+  font-family: "Edu VIC WA NT Beginner", sans-serif;
+  color: #80ed99;
+  font-size: 2.2rem;
+}
+
+.contactMe form {
+  grid-area: 2/2 / span 5 / span 2;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  padding: 20px;
+  height: fit-content;
+  color: white;
+}
+
+.contactMe form h2 {
+  grid-column: 1 / span 2;
+  padding: 2px;
+  display: flex;
+}
+
+.contactMe form h2 a {
+  color: inherit;
+}
+
+.contactMe form h2 p {
+  padding-left: 17px;
+  font-family: 'Moderustic', sans-serif;
+  color: #80ed99;
+}
+
+.contactMe form input {
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px;
+  font-size: 1.1rem;
+  border: none;
+  color: white;
+  background-color: #212529;
+}
+
+.contactMe form input:focus {
+  border: 1px solid #85f69f;
+  outline: none;
+}
+
+.contactMe form textarea {
+  width: calc(100% - 40px);
+  grid-column: 1 / span 2;
+  margin: 20px;
+  padding: 20px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  resize: none;
+  border: none;
+  color: white;
+  background-color: #212529;
+}
+
+.contactMe form textarea:focus {
+  border: 1px solid #85f69f !important;
+}
+
+.contactMe button {
+  grid-column: 1 / span 2;
+  margin: 20px auto;
+}
+
+form h2 .socialLinks {
+  padding: 5px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 10px;
+  background-color: #212529;
+  border-radius: 30px;
+}
+
+form h2 .socialLinks i {
+  padding: 10px;
+  border-radius: 50%;
+  transition-duration: 0.3s;
+}
+
+form h2 .socialLinks i:hover {
+  background-color: #176d2d;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  text-align: center;
+  color: white;
+  width: 100%;
+  font-weight: 200;
+  font-size: 0.8rem;
+}
+
+footer li {
+  padding: 10px;
+} */
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px; /* Adjusted from -120px to a positive margin */
+  color: white;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.contactInfo i {
+  font-size: 2.1rem;
+  color: #80ed99;
+  margin: 5px auto;
+}
+
+.contactInfo h3 {
+  font-family: "Moderustic", sans-serif;
+  color: #80ed99;
+  margin: 5px 0; /* Simplified padding to margin */
+}
+
+.contactInfo a {
+  color: white;
+  text-decoration: none;
+}
+
+.contactInfo a:hover {
+  color: #85f69f;
+  text-decoration: underline;
+}
+
+.contactMe {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: auto 1fr 1fr 1fr auto; /* Adjusted for better responsiveness */
+  position: relative;
+  padding: 50px;
+  gap: 20px; /* Added gap for spacing between grid items */
+}
+
+.contactMe h1 {
+  grid-column: 1 / -1; /* Span all columns */
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family: "Edu VIC WA NT Beginner", sans-serif;
+  color: #80ed99;
+  font-size: 2.2rem;
+}
+
+.contactMe form {
+  grid-column: 2 / 3;
+  grid-row: 2 / 5; /* Adjusted grid area to fit form better */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  /* padding: 20px; */
+  gap: 20px; /* Added gap for spacing between form elements */
+  color: white;
+}
+
+.contactMe form h2 {
+  grid-column: 1 / -1; /* Span all columns */
+  padding: 2px;
+  display: flex;
+  align-items: center; /* Centered vertically */
+}
+
+.contactMe form h2 p {
+  padding-left: 0px;
+  font-family: "Moderustic", sans-serif;
+  color: #80ed99;
+}
+
+.contactMe form input,
+.contactMe form textarea {
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  border: none;
+  color: white;
+  background-color: #212529;
+}
+
+.contactMe form input:focus,
+.contactMe form textarea:focus {
+  border: 1px solid #85f69f;
+  outline: none;
+}
+
+.contactMe form textarea {
+  width: 100%;
+  height: 250px;
+  grid-column: 1 / span 2;
+  resize: none;
+}
+
+.contactMe button {
+  grid-column: 1 / -1; /* Span all columns */
+  margin: 20px auto;
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #80ed99;
+  color: #212529;
+  cursor: pointer;
+}
+
+.contactMe button:hover {
+  background-color: #65c07b;
+}
+
+.socialLinks {
+  padding: 5px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 10px;
+  background-color: #212529;
+  border-radius: 30px;
+}
+
+.socialLinks i {
+  color: rgba(52, 58, 64, 0.9);
+  padding: 10px;
+  border-radius: 50%;
+  transition-duration: 0.3s;
+}
+
+.socialLinks i:hover {
+  background-color: #176d2d;
+  color: white;
+}
+
+footer {
+  background-color: grey;
+  padding: 5px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  width: 100%;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
