@@ -1,5 +1,5 @@
 alert('Sementara Tidak Bisa Mengirim Pesan Melalui FORM.')
-alert('Dimohon Buka Website Ini di Dekstop Site agar lebih Maksimal, Sedang PROSES Responsif Website.')
+alert('Dimohon Buka Website Ini di Laptop atau di Komputer agar lebih Maksimal, Sedang PROSES Responsif Website.')
 
 // Loaded Website
 window.addEventListener("load", () => {
